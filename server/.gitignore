@@ -1,0 +1,13 @@
+# .gitignore
+
+# Ignore node_modules directory for Node.js
+node_modules/
+
+# Ignore npm debug logs
+npm-debug.log
+
+# Ignore build artifacts for React
+build/
+
+# Ignore environment configuration files
+.env
