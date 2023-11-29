@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional, List
-
+from datetime import datetime
 
 
 class BaseUser(BaseModel):
@@ -18,5 +18,7 @@ class UserLogin(BaseUser):
     scope: Optional[list] = None
 
 
-
+class VerifyToken(BaseUser):
+    token:str
+    creation_time:datetime
 
