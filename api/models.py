@@ -90,3 +90,8 @@ class Share(Base, TimestampMixin):
     recipient_email = Column(String)
     user = relationship("User", back_populates="shares")
     post = relationship("Post", back_populates="shares")
+
+
+
+### UP & DOWN Vote model needed.
+

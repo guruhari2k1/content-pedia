@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from mangum import Mangum
 from users import router as user_router
 from post import router as post_router
+from decouple import config
 
 app = FastAPI()
 
@@ -9,6 +10,7 @@ app = FastAPI()
 app.include_router(user_router, prefix="/users", tags=["users"])
 app.include_router(post_router, prefix="/posts", tags=["posts"])
 
+SECRET_KEY = config("SECRET_KEY")
 
 # Other routes and application configuration
 @app.get("/")
